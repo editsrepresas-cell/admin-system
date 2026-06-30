@@ -10,7 +10,7 @@ const formRef = ref<FormInstance>()
 const loading = ref(false)
 
 const form = ref({
-  username: 'admin',
+  username: 'superadmin',
   password: '123456',
 })
 

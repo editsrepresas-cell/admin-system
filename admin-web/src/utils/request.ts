@@ -1,9 +1,11 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
+import { demoAdapter, isDemoMode } from './demoMock'
 
 const request = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
   timeout: 10000,
+  adapter: isDemoMode() ? demoAdapter : undefined,
 })
 
 request.interceptors.request.use((config) => {
