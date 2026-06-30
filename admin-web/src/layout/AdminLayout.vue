@@ -139,7 +139,7 @@ const toggleMenu = () => {
   collapsed.value = !collapsed.value
 }
 
-const handleMenuClick = (path: string) => {
+const handleMenuSelect = (path: string) => {
   router.push(path)
 }
 
@@ -190,12 +190,12 @@ onMounted(async () => {
         background-color="#001529"
         text-color="#c0c4cc"
         active-text-color="#ffffff"
+        @select="handleMenuSelect"
       >
         <el-menu-item
           v-for="menu in menuItems"
           :key="menu.path"
           :index="menu.path"
-          @click="handleMenuClick(menu.path)"
         >
           <el-icon><component :is="menu.icon" /></el-icon>
           <template #title>
@@ -287,6 +287,8 @@ onMounted(async () => {
 }
 
 .admin-aside {
+  position: relative;
+  z-index: 10;
   background: #001529;
   transition: width 0.2s ease;
 }
