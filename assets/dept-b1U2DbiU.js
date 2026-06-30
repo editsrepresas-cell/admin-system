@@ -1,0 +1,1 @@
+import{a as e}from"./index-DHqQZeG6.js";var t=()=>e.get(`/depts/tree`),n=t=>e.post(`/depts`,t),r=(t,n)=>e.put(`/depts/${t}`,n),i=t=>e.delete(`/depts/${t}`);export{r as i,i as n,t as r,n as t};
