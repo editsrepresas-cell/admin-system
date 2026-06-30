@@ -1,5 +1,9 @@
 # 后台管理系统
 
+在线演示：https://editsrepresas-cell.github.io/admin-system/
+
+项目源码：https://github.com/editsrepresas-cell/admin-system
+
 企业级后台管理系统基础版本，包含用户、角色、权限、部门、岗位、字典、通知公告、操作日志、认证鉴权、仪表盘和系统设置等后台基础能力。
 
 ## 技术栈
