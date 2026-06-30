@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "build:pages": "vue-tsc -b && vite build --base=/admin-system/",
+    "build:pages": "vue-tsc -b && vite build --base=/admin-system/ && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "preview": "vite preview",
     "deploy": "npm run build:pages && gh-pages -d dist"
   },
