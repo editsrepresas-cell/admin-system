@@ -1,1 +1,0 @@
-import{a as e}from"./index-i4WHy1vn.js";var t=()=>e.get(`/posts`),n=()=>e.get(`/posts/options`),r=t=>e.post(`/posts`,t),i=(t,n)=>e.put(`/posts/${t}`,n),a=t=>e.delete(`/posts/${t}`);export{i as a,n as i,a as n,t as r,r as t};
