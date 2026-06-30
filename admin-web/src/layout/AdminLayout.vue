@@ -139,6 +139,10 @@ const toggleMenu = () => {
   collapsed.value = !collapsed.value
 }
 
+const handleMenuClick = (path: string) => {
+  router.push(path)
+}
+
 const handleBellClick = () => {
   router.push('/notices')
 }
@@ -186,9 +190,13 @@ onMounted(async () => {
         background-color="#001529"
         text-color="#c0c4cc"
         active-text-color="#ffffff"
-        router
       >
-        <el-menu-item v-for="menu in menuItems" :key="menu.path" :index="menu.path">
+        <el-menu-item
+          v-for="menu in menuItems"
+          :key="menu.path"
+          :index="menu.path"
+          @click="handleMenuClick(menu.path)"
+        >
           <el-icon><component :is="menu.icon" /></el-icon>
           <template #title>
             <span>{{ menu.title }}</span>
